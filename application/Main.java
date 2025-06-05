@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Item[] itens = new Item[5];
         RegistradorDeItens registradorDeItens = new RegistradorDeItens();
-        
+
         registradorDeItens.start(itens);
 
         rodarPrograma(itens);
@@ -38,15 +38,13 @@ public class Main {
             }
         }
 
-        System.out.println("Saindo do Programa");
+        System.out.println("Vendas encerradas!");
         scanner.close();
     }
 
-    
-
     static void printarMenu(Item[] itens){
         int i;
-        System.out.println("Escolha um produto abaixo para comprar ou sair do programa");
+        System.out.println("Escolha um produto para comprar ou sair do programa");
         for (i = 1; i <= itens.length; i++) {
             System.out.println(i+"- "+ itens[i-1].getDescricao());
         }

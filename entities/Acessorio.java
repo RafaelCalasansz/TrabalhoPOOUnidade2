@@ -13,7 +13,7 @@ public class Acessorio extends Peca implements Item {
         Scanner scanner = new Scanner(System.in);
         int i;
 
-        System.out.println("Quantas pecas voce deseja comprar?");
+        System.out.print("Digite quantas pecas deseja: ");
 
         i=scanner.nextInt();
 
@@ -25,10 +25,10 @@ public class Acessorio extends Peca implements Item {
         int qntdVendas= escolha();
 
         if (qntdVendas>qntdEstoque) {
-            throw new ErroDeVendas("A quantidade de peças desejadas nao esta disponivel no momento");
+            throw new ErroDeVendas("A quantidade de peças indisponivel!");
         }
         if (qntdVendas<=0) {
-            throw new ErroDeVendas("Quantidade Invalida");
+            throw new ErroDeVendas("Quantidade Invalida!");
         }
 
         qntdEstoque-=qntdVendas;
